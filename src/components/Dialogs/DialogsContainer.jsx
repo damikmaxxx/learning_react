@@ -5,7 +5,7 @@ import Dialogs from './Dialogs';
 
 
 
-
+console.log("asas")
 
 let mapStateToProps = (state) => {
     return {
