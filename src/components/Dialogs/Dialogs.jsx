@@ -11,7 +11,7 @@ const Dialogs = (props) => {
         props.addMessage()
     }
     let onNewMessageChange = (e) => {
-
+        
         let text = e.target.value
         props.updateNewMessageText(text)
     }

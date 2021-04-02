@@ -1,12 +1,9 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import { UpdateNewMessageTextActionCreator, addMessageActionCreator } from '../../redux/dialoge-reducer'
 import Dialogs from './Dialogs';
 
 
 
-console.log("asas")
-console.log("asas2")
 let mapStateToProps = (state) => {
     return {
         dialogsPage:state.dialogsPage,
@@ -16,11 +13,11 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateNewMessageText: () =>{
-            dispatch(addMessageActionCreator())
-        },
-        addMessage: (text) =>{
+        updateNewMessageText: (text) =>{
             dispatch(UpdateNewMessageTextActionCreator(text))
+        },
+        addMessage: () =>{
+            dispatch(addMessageActionCreator())
         }
     }
 }
