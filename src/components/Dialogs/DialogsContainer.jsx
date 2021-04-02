@@ -6,7 +6,7 @@ import Dialogs from './Dialogs';
 
 
 console.log("asas")
-
+console.log("asas2")
 let mapStateToProps = (state) => {
     return {
         dialogsPage:state.dialogsPage,
