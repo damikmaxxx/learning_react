@@ -1,0 +1,16 @@
+.post{
+  margin: 10px 0px;
+}
+
+.item{
+  display: flex;
+  font-size:20px;
+  color:white;
+}
+
+.item img{
+  width:50px;
+  height:50px;
+  border-radius: 50px;
+  margin:10px;
+}

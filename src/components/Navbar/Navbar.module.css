@@ -1,0 +1,22 @@
+.nav{
+  margin:5px;
+  padding:5px;
+  background:#5F2580;
+}
+.nav ul{
+  list-style-type: none;
+  
+  
+  
+}
+.nav ul li{
+  margin:20px 0px;
+}
+.nav ul li a{
+  color:white;
+  font-size:25px;
+  text-decoration: none;
+}
+.nav ul li a.active{
+  color:gold;
+}

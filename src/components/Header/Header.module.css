@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    align-items: center;
+    background:#5F2580;
+    padding:20px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    margin:5px;
+  }
+  
+.img img{
+    width:80px;
+}
