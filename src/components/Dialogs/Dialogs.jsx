@@ -16,7 +16,6 @@ const Dialogs = (props) => {
         props.updateNewMessageText(text)
     }
 
-    debugger
     let dialogs = props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id} />)
     let messages = props.dialogsPage.messages.map(m => <Message message={m.message} />)
     return (
