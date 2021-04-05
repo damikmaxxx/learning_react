@@ -13,12 +13,12 @@ const User = (props) => {
                 </div>
                 <div className={c.userInfo}>
                     <span className={c.fullNameStatus}>
-                        <div className={c.fullName}>{props.fullName}</div>
+                        <div className={c.fullName}>{props.name}</div>
                         <div className={c.status}>{props.status}</div>
                     </span>
                     <span className={c.countryCity}>
-                        <div className={c.country}>{props.country}</div>
-                        <div className={c.city}>{props.city}</div>
+                        <div className={c.country}>{"props.country"}</div>
+                        <div className={c.city}>{"props.city"}</div>
                     </span>
                 </div>
             </div>
