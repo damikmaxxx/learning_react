@@ -1,0 +1,12 @@
+.paginator {
+}
+.paginator span {
+  margin: 5px;
+  font-size: 20px;
+  cursor:pointer;
+}
+
+.selectedPage{
+    color:white;
+    font-weight: 900;
+}
