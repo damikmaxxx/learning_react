@@ -1,10 +1,10 @@
-import c from './Profile.module.css';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
+import c from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 const Profile = (props) => {
   return (
-    <div className="profile">
-      <ProfileInfo />    
+    <div className={c.profile}>
+      <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>    
       <MyPostsContainer store={props.store}/>
     </div>
   )

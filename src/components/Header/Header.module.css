@@ -11,3 +11,11 @@
 .img img{
     width:80px;
 }
+.row{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+}
+.auth a,.auth {
+  color:white;
+}

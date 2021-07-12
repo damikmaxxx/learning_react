@@ -1,23 +1,31 @@
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+import { Field, reduxForm } from 'redux-form';
+import { Textarea } from '../common/FormsControl/FormsControls';
+import { maxLengthCreator, required } from '../../utils/validator/validators';
+import DialogItem from './DialogItem/DialogItem';
 import c from './Dialogs.module.css';
 import Message from './Message/Message';
-import DialogItem from './DialogItem/DialogItem';
-import React from 'react';
 
+let maxLength50 = maxLengthCreator(50)
+const DialogForm = (props) => {
+    
+    return <form onSubmit={props.handleSubmit}>
+            <Field component={Textarea} name={"text"} placeholder={"..."} validate={[required,maxLength50]}></Field>
+            <button >Write text</button>
+        </form>
+}
 
-
+const DialogReduxForm = reduxForm({form:"dialog"})(DialogForm)
 
 const Dialogs = (props) => {
-    let addMessage = () => {
-        props.addMessage()
-    }
-    let onNewMessageChange = (e) => {
-        
-        let text = e.target.value
-        props.updateNewMessageText(text)
+    const addNewMessage = (value) => {
+        props.addMessage(value.text)
     }
 
     let dialogs = props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id} />)
     let messages = props.dialogsPage.messages.map(m => <Message message={m.message} />)
+    if (!props.isAuth) return <Redirect to={"/login"}/>
     return (
         <div>
             <div className={c.dialogs}>
@@ -30,10 +38,7 @@ const Dialogs = (props) => {
                         {messages}
                     </div>
                     <div>
-                        <div>
-                            <textarea onChange={onNewMessageChange} value={props.dialogsPage.newMessageText}></textarea>
-                            <button onClick={addMessage}>Write text</button>
-                        </div>
+                        <DialogReduxForm onSubmit={addNewMessage}/>
                     </div>
                 </div>
 
